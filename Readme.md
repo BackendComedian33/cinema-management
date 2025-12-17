@@ -1,5 +1,6 @@
 # Online Cinema Ticketing System
 by Gemilang Cahyaning Adi
+Postman Collection = https://drive.google.com/file/d/1kiRcfahkY0y5i_KHLhXRTCef-cKz_Y0G/view?usp=sharing
 ## Deskripsi
 Online Cinema Ticketing System adalah platform pembelian tiket bioskop secara online
 yang dirancang untuk skala nasional. Sistem ini memungkinkan customer membeli tiket
@@ -66,3 +67,4 @@ dan dapat dikembangkan lebih lanjut ke tahap implementasi teknis.
 Dokumentasi Database
 
 https://dbdiagram.io/d/Technical-Test-MKP-6915a79b6735e111709ef61f
+
