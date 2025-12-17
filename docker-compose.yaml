@@ -1,0 +1,34 @@
+volumes:
+  pgdata:
+
+services:
+  pgsql:
+    image: postgres:15
+    container_name: postgres-db-technical-test
+    restart: always
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: technical-test
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5435:5432"
+
+  api: 
+    build: . 
+    container_name: ticketing-api-service
+    restart: always
+    env_file:
+      - .env
+    ports:
+      - "127.0.0.1:3300:3300" 
+    depends_on:
+      - pgsql 
+    environment:
+      DB_HOST: primary 
+      DB_USER: pgsql
+      DB_PASSWORD: mypassword
+      DB_NAME: technical-test
+      
+      
